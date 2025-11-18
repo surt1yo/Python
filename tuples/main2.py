@@ -13,3 +13,8 @@ for day in weather:
         continue  
 print("Number of rainy days:",rainy)
 print("Number of sunny days:",sunny)
+avg=weather.count(1)/len(weather)
+if avg>0.5:
+    print("The weather is mostly rainy")
+else:
+    print("The weather is mostly sunny")

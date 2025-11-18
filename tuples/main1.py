@@ -8,3 +8,12 @@ if tuple==reversed_tuple:
     print("The tuple is a palindrome")
 else:
     print("The tuple is not a palindrome")
+avg=sum(tuple)/len(tuple)
+print(avg)
+list1=list(tuple)
+list1.sort()
+print(list1)
+smallest=list1[0]
+largest=list1[-1]
+print(smallest)
+print(largest)
