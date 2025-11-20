@@ -11,3 +11,4 @@ print(count)
 array1.reverse()
 print(array1)
 print(array2[2])
+
