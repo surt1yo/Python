@@ -21,4 +21,4 @@ if __name__ == "__main__":
         print("Password:", pwd)
         choice = input('Type "new" for a new password or "q" to quit: ').strip().lower()
         if choice != "new":
-            break
+            exit()
