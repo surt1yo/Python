@@ -15,4 +15,10 @@ def generate_password(length=12):
     random.shuffle(password_chars)
     password = ''.join(password_chars)
     return password
-print(generate_password(12))
+if __name__ == "__main__":
+    while True:
+        pwd = generate_password(12)
+        print("Password:", pwd)
+        choice = input('Type "new" for a new password or "q" to quit: ').strip().lower()
+        if choice != "new":
+            break
