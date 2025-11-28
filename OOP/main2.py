@@ -6,10 +6,10 @@
 #5. Print Instance variables as well
 class Parrot:
     species="Bird"
-    def __init__(self,name,age):
+    def __init__(self,name="Harry",age=3):
         self.name=name
         self.age=age
-parrot=Parrot("Harry",3)
+parrot=Parrot()
 parrot1=Parrot("Bob",4)
 print(f"{parrot.name} is a {parrot.species} and is {parrot.age} years old.")
 print(f"{parrot1.name} is a {parrot1.species} and is {parrot1.age} years old.")
