@@ -7,3 +7,22 @@
 #and use the __init__() function. 3. We'll use the __str__() function to get a 
 #string with the term and its definition. 4. Save the strings that have been returned in a list. 
 #5. To print all of the stored flashcards, use a while loop.
+class Flashcard:
+    def __init__(self, word, meaning):
+        self.word = word
+        self.meaning = meaning
+    def __str__(self):  
+        sentence=f"--------------------------------\nWord: {self.word}\nMeaning: {self.meaning}.\n--------------------------------"   
+        return sentence     
+list_flashcards=[]
+while True:
+    word=str(input("Enter the word: "))
+    meaning=str(input("Enter the meaning: "))
+    list_flashcards.append(Flashcard(word,meaning))
+    more=str(input("Do you want to add more flashcards? (yes/no): "))
+    if more.lower()!="yes":
+        break
+    else:
+        continue
+for i in list_flashcards:
+    print(i)
