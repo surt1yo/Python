@@ -24,7 +24,4 @@ while not done:
             screen.blit(text,(130,20))
             screen.blit(bigguy_img,(250,200))
             pygame.display.flip()
-
-
 pygame.quit()
-
