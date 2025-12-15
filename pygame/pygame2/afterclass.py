@@ -3,11 +3,11 @@
 import pygame
 import random
 pygame.init()
-screen=pygame.display.set_mode((800,600))
-pygame.display.set_caption("Game Screen with Rectangle and Text")
-bg_color=(0,0,0)
+screen=pygame.display.set_mode((640,480))
+pygame.display.set_caption("My first game screen")
+bg_color=(255,255,255)
 rect_color=(0,125,255)
-font_color=(255,255,255)
+font_color=(0,0,0)
 font=pygame.font.Font(None,74)
 done=False
 while not done:
