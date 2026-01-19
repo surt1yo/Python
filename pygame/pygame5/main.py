@@ -2,7 +2,6 @@
 import math
 import random
 import pygame
-global bullet_state
 # Constants
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 500 
@@ -78,16 +77,24 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 playerX_change = -15
-                playerX = playerX + playerX_change  
             if event.key == pygame.K_RIGHT:
                 playerX_change = 15
                 playerX = playerX + playerX_change  
             
             if event.key == pygame.K_SPACE and bullet_state=="ready":
-               print("bullet ready")
                bulletX = playerX
-               print(f"playerx={playerX} and bulletX={bulletX}")
                fire_bullet(bulletX,bulletY)
+        
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                playerX_change = 0
+    # Update player position
+    playerX += playerX_change
+    if playerX < 0:
+        playerX = 0
+    if playerX > SCREEN_WIDTH - 64:
+        playerX = SCREEN_WIDTH - 64
+    
     # Game Over
     #Enemy Movement
     for i in range(num_of_enemies):
@@ -110,19 +117,21 @@ while running:
         screen.blit(enemyImg[i],(enemyX[i],enemyY[i]))
    
 
-        
-            
+         
+    # Bullet Movement        
     if bulletY <= 0:
         bulletY = PLAYER_START_Y
         bullet_state = "ready"
     else:
-        bullet_state =="fire"
+        bullet_state = "fire"
         fire_bullet(bulletX, bulletY)
         bulletY -= bulletY_change    
 
         
     screen.blit(playerImg, (playerX, playerY))
     pygame.display.update()
+    pygame.display.set_caption(f"Space Invaders  Score: {score_value}")
+pygame.quit()   
         
         
 
