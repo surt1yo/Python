@@ -15,7 +15,8 @@ class RestaurantOrderManagement:
             "PIZZA": 12.99,
             "SODA": 1.99,
             "SALAD": 6.99
-        }       
+        } 
+          
         self.exchange_rates = 82.0  
         self.setup_bg(root)
         # Frames
@@ -61,6 +62,25 @@ class RestaurantOrderManagement:
         canvas.create_image(0, 0, anchor=tk.NW, image=self.bg_image)
 
     def place_order(self,root):
+        total_cost = 0.0
+        order_details = "Order Details:\n\n"
+
+        for item, entry in self.menu_quantities.items():
+            try:
+                quantity = int(entry.get())
+                if quantity > 0:
+                    item_cost = self.menu_items[item] * quantity
+                    total_cost += item_cost
+                    order_details += f"{item} x {quantity} = ${item_cost:.2f}\n"
+            except ValueError:
+                messagebox.showerror("Invalid Input", f"Please enter a valid quantity for {item}.")
+                return
+
+        order_details += f"\nTotal Cost: ${total_cost:.2f}"
+        order_details += f"\nTotal Cost in NZD: ${total_cost * self.exchange_rates:.2f}"
+
+        messagebox.showinfo("Order Summary", order_details)
+
         
 
 # Block to run the app
