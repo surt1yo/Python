@@ -41,6 +41,7 @@ def ai_move(board, ai_symbol, player_symbol):
         if board[i].isdigit():
             board_copy = board.copy()
             board_copy[i] = player_symbol
+            
             if check_win(board_copy, player_symbol):
                 board[i] = ai_symbol
                 return

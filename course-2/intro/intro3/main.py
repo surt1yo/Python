@@ -1,5 +1,4 @@
 # Create an rule-based chatbot using Python.
-import colorama
 import random
 from colorama import Fore, init
 
