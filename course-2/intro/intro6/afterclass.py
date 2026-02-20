@@ -1,5 +1,9 @@
-# Create an AI Movie Recommendation System using 
-# TensorFlow and Keras to get MovieLens dataset using Python.
+# Create a movie recommendation system that offers 
+# AI-based or random suggestions. Users can select
+# recommendations based on genre, mood, or IMDB rating.
+# Display structured movie details like title, genre, 
+# IMDB rating, and sentiment analysis of the overview 
+# for a clear and engaging experience.
 import pandas as pd
 from textblob import TextBlob
 from colorama import init, Fore
