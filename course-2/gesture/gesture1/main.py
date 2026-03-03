@@ -34,6 +34,11 @@ while True:
 
     # Display the count on the frame
     cv2.putText(frame, f'Count: {face_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+
+    # Increase brightness using convertScaleAbs
+    bright_frame = cv2.convertScaleAbs(frame, alpha=1, beta=50)
+
+    cv2.imshow("Video Brightness Control", bright_frame)
     
     # Display the resulting frame
     cv2.imshow('Face Detection- press Q to quit', frame)
