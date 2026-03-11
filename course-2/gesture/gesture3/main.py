@@ -28,7 +28,7 @@ def detect_gesture(hand_landmarks):
     tip_ids = [4, 8, 12, 16, 20]
     pip_ids = [2, 6, 10, 14, 18]
     extended = 0
-    #If the difference is greater than 0.04, the thumb is considered open.
+    # If the difference is greater than 0.04, the thumb is considered open.
     if abs(landmarks[tip_ids[0]].x - landmarks[pip_ids[0]].x) > 0.04:
        extended += 1
     # Thumb moves sideways, not up and down like other fingers, so we check horizontal distance for thumb
