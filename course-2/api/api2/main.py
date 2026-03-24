@@ -38,4 +38,3 @@ else:
     else:
         print("Sorry, couldn't fetch trivia questions at the moment. Please try again later.\n")
     print("Error code:", response.status_code)
-    
