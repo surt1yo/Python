@@ -23,4 +23,3 @@ while True:
             print(fact)
         else:
             print("Error fetching fact. Please try again.")
-
