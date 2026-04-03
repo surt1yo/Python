@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 print(Fore.RED + f"Error: {response.status_code} - {response.text}" + Style.RESET_ALL)
             else:
                 summary_result = response.json()[0]["summary_text"]
-            print(Fore.GREEN + f"\nHere is your summary:\n{summary_result}" + Style.RESET_ALL)
+                print(Fore.GREEN + f"\nHere is your summary:\n{summary_result}" + Style.RESET_ALL)
         except requests.exceptions.RequestException as e:
             print(Fore.RED + f"❌ API Request Failed: {e}")
             
