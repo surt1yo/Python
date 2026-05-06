@@ -5,9 +5,6 @@
 # belongs to with a visual confidence bar. 
 # This is the same technology used by major news organizations!
 from cProfile import label
-
-from cProfile import label
-
 from conflg import hf_api_key
 import requests
 
