@@ -1,0 +1,1 @@
+from config import GROQ_API_KEY as api
