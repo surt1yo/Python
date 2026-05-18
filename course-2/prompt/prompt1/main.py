@@ -10,7 +10,7 @@
     information to see how the AI's responses 
     evolve with each iteration.
                                                                 """
-from hf import generate_response
+from 
 
 print("Welcome to ai engineering tutorial!")
 vague = input("Enter a vague prompt: ")

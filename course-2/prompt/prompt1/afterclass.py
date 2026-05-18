@@ -4,7 +4,7 @@
     and evaluating prompts for clarity,
     specificity, and context.
                                         """
-from hf import generate_response
+fro
 
 print("Welcome to ai engineering tutorial!")
 vague = input("Enter a vague prompt: ")
